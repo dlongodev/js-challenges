@@ -1,6 +1,21 @@
 // PREP => Parameter, Return, Example, Pseudo
 //------------------------------------------------------------------------------------------------------
-// Write a function that determines whether the passed in arrays are similar.Similar means they contain the same elements, and the same number of occurrences of elements.
+// LEETCODE: 217. Contains Duplicate
+//Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+const containsDuplicate = function (nums) {
+    const removeDuplicates = [...new Set(nums)]
+    if (removeDuplicates.length !== nums.length) {
+        return true
+    } else {
+        return false
+    }
+};
+
+console.log("217 ~>", containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])) // true
+console.log("217 ~>", containsDuplicate([1, 2, 3, 4])) // false
+//------------------------------------------------------------------------------------------------------
+// CODEWARS:
+// Write a function that determines whether the passed in arrays are similar. Similar means they contain the same elements, and the same number of occurrences of elements.
 
 function arraysSimilar(arr1, arr2) {
     // check if the length are equal
